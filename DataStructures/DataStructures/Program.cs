@@ -11,7 +11,6 @@ namespace DataStructures
             link.Add(56);
             link.Add(30);
             link.Add(70);
-            link.Display();
         }
     }
 }
