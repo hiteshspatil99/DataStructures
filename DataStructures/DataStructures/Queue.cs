@@ -51,11 +51,11 @@ namespace DataStructures
         {
             if (front == null)
             {
-                Console.WriteLine("Queue is empty");
+                Console.WriteLine("Queue is Empty");
             }
             else
             {
-                Console.WriteLine("perform dequeu");
+                Console.WriteLine("Perform Deque");
                 front = front.next;
             }
         }

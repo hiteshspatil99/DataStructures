@@ -23,21 +23,36 @@ namespace DataStructures
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} Inserted into Linked List", node.data);
+            Console.WriteLine("{0} is Inserted into the linked list", node.data);
+        }
+        internal void AddInReverseOrder(int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;
+                head = newNode;
+                head.next = temp;
+            }
         }
         internal void Display()
         {
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("Linked List is Empty");
+                Console.WriteLine("LinkedList is empty");
                 return;
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.Write(temp.data + " ");
                 temp = temp.next;
             }
+            Console.WriteLine();
         }
         internal Node InsertAtParticularPosition(int position, int data)
         {
