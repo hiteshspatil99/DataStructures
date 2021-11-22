@@ -23,36 +23,21 @@ namespace DataStructures
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} is inserted into the linked list", node.data);
-        }
-        internal void AddInReverseOrder(int data)
-        {
-            Node newNode = new Node(data);
-            if (this.head == null)
-            {
-                this.head = newNode;
-            }
-            else
-            {
-                Node temp = this.head;
-                head = newNode;
-                head.next = temp;
-            }
+            Console.WriteLine("{0} Inserted into Linked List", node.data);
         }
         internal void Display()
         {
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("LinkedList is empty");
+                Console.WriteLine("Linked List is Empty");
                 return;
             }
             while (temp != null)
             {
-                Console.Write(temp.data + " ");
+                Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
-            Console.WriteLine();
         }
         internal Node InsertAtParticularPosition(int position, int data)
         {
@@ -106,6 +91,22 @@ namespace DataStructures
             }
             NewNode.next = null;
             return head;
+        }
+        internal int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+
+                if (node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
         }
     }
 }
